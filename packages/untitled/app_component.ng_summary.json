@@ -55,7 +55,7 @@
       "lifecycleHooks": [],
       "template": {
         "encapsulation": 0,
-        "template": "<h1>Wedding Website</h1>\n\n<todo-list></todo-list>\n",
+        "template": "<h1>Wedding Website</h1>\n<div class=\"body\">\n    <material-select class=\"menu\"\n                     [selection]=\"selectionModel\"\n                     [options]=\"selectionOptions\"\n                     [itemRenderer]=\"itemRenderer\">\n    </material-select>\n    <div class=\"main-content\">\n        This is where the content of {{itemRenderer(selectedPage)}} will be\n    </div>\n</div>\n\n",
         "templateUrl": "asset:untitled/lib/app_component.html",
         "styles": [],
         "styleUrls": [
@@ -75,6 +75,20 @@
       "viewProviders": [],
       "queries": [],
       "viewQueries": []
+    },
+    "Page": {
+      "class": "Identifier",
+      "name": "Page",
+      "moduleUrl": "asset:untitled/lib/app_component.dart",
+      "prefix": null,
+      "value": null
+    },
+    "_pageToName": {
+      "class": "Identifier",
+      "name": "_pageToName",
+      "moduleUrl": "asset:untitled/lib/app_component.dart",
+      "prefix": null,
+      "value": null
     }
   },
   "alias": {}
