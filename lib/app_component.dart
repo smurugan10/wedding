@@ -17,5 +17,27 @@ import 'src/todo_list/todo_list_component.dart';
   providers: const [materialProviders],
 )
 class AppComponent {
-  // Nothing here yet. All logic is in TodoListComponent.
+  final selectionModel = new SelectionModel<Page>.withList(selectedValues: [Page.home]);
+  final selectionOptions = new SelectionOptions<Page>.fromList(Page.values);
+  final itemRenderer = (Page page) => _pageToName[page];
+
+  Page get selectedPage => selectionModel.isNotEmpty ? selectionModel.selectedValues.first : Page.home;
 }
+
+enum Page {
+  home,
+  photos,
+  venue,
+  hotels,
+  registry,
+  rsvp
+}
+
+const _pageToName = const {
+  Page.home: 'Home',
+  Page.photos: 'Photos',
+  Page.venue: 'Venue',
+  Page.hotels: 'Hotels',
+  Page.registry: 'Registry',
+  Page.rsvp: 'RSVP',
+};
